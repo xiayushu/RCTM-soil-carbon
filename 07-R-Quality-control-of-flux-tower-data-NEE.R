@@ -32,7 +32,7 @@ data[which(data$Date %in% date_list),]$NEE_PI_F_avg <- NA
 data_reorg2 <- xts(x = data[,c("NEE_PI_F_avg")], order.by = data$Date)
 plot2 <- dygraph(data_reorg2) %>%
   dySeries("V1", label = "NEE") %>%
-  dyAxis("y", label = "µmol CO<sub>2</sub> m<sup>-2</sup> s<sup>-1</sup>", valueRange = c(-10, 20)) %>%
+  dyAxis("y", label = "Âµmol CO<sub>2</sub> m<sup>-2</sup> s<sup>-1</sup>", valueRange = c(-10, 20)) %>%
   print(plot2)
 
 # Export QC results
