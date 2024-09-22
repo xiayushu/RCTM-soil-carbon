@@ -48,7 +48,7 @@ data[which(data$Date %in% date_list),]$GPP_PI_F_avg <- NA
 data_reorg2 <- xts(x = data[,c("GPP_PI_F_avg")], order.by = data$Date)
 plot2 <- dygraph(data_reorg2) %>%
   dySeries("V1", label = "GPP") %>%
-  dyAxis("y", label = "µmol CO<sub>2</sub> m<sup>-2</sup> s<sup>-1</sup>", valueRange = c(0, 15)) %>%
+  dyAxis("y", label = "Âµmol CO<sub>2</sub> m<sup>-2</sup> s<sup>-1</sup>", valueRange = c(0, 15)) %>%
   print(plot2)
 data <- within (data, NEE_PI_F_avg[is.na(GPP_PI_F_avg)] <- NA)
 data <- within (data, RECO_PI_F_avg[is.na(GPP_PI_F_avg)] <- NA)
@@ -80,7 +80,7 @@ flux_plot <- dygraph(data_flux_reorg, main = "Visualization for flux measures") 
   dySeries("GPP_PI_F_avg", label = "GPP") %>%
   dySeries("NEE_PI_F_avg", label = "NEE") %>%
   dySeries("RECO_PI_F_avg", label = "RECO") %>%
-  dyAxis("y", label = "µmol CO<sub>2</sub> m<sup>-2</sup> s<sup>-1</sup>", valueRange = c(-20, 30)) %>%
+  dyAxis("y", label = "Âµmol CO<sub>2</sub> m<sup>-2</sup> s<sup>-1</sup>", valueRange = c(-20, 30)) %>%
   dyRangeSelector() %>%
   dyLegend(width = 650) %>%
   dyOptions(colors = RColorBrewer::brewer.pal(3, "Set1"))
