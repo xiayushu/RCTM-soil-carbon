@@ -33,7 +33,7 @@ site_I <- data.frame()
 site_num_I <- data.frame()
 for (i in 1:length(unique(all_year$Site))){
   all_year_i <- all_year[which(all_year$site_num == i),]
-  if((dim(all_year_i)[1] > 2)&(sd(all_year_i$NEE_measured)> 0)){
+  if((dim(all_year_i)[1] >= 2)&(sd(all_year_i$NEE_measured)> 0)){
     r2 <- cor(all_year_i$NEE_measured, all_year_i$NEE)^2
     mbe <- mean(all_year_i$NEE_measured - all_year_i$NEE)
     RMSE <- sqrt(mean((all_year_i$NEE_measured - all_year_i$NEE)^2))
@@ -68,7 +68,7 @@ site_I <- data.frame()
 site_num_I <- data.frame()
 for (i in 1:length(unique(all_month$Site))){
   all_month_i <- all_month[which(all_month$site_num == i),]
-  if((dim(all_month_i)[1] > 2)&(sd(all_month_i$NEE_measured)> 0)){
+  if((dim(all_month_i)[1] >= 2)&(sd(all_month_i$NEE_measured)> 0)){
     r2 <- cor(all_month_i$NEE_measured, all_month_i$NEE)^2
     mbe <- mean(all_month_i$NEE_measured - all_month_i$NEE)
     RMSE <- sqrt(mean((all_month_i$NEE_measured - all_month_i$NEE)^2))
@@ -120,7 +120,7 @@ site_I <- data.frame()
 site_num_I <- data.frame()
 for (i in 1:length(unique(RCTM_year1$Site))){
   RCTM_year1_i <- RCTM_year1[which(RCTM_year1$site_num == i),]
-  if((dim(RCTM_year1_i)[1] > 2)&(sd(RCTM_year1_i$NEE_measured)> 0)){
+  if((dim(RCTM_year1_i)[1] >= 2)&(sd(RCTM_year1_i$NEE_measured)> 0)){
     r2 <- cor(RCTM_year1_i$NEE_measured, RCTM_year1_i$NEE)^2
     mbe <- mean(RCTM_year1_i$NEE_measured - RCTM_year1_i$NEE)
     RMSE <- sqrt(mean((RCTM_year1_i$NEE_measured - RCTM_year1_i$NEE)^2))
@@ -153,7 +153,7 @@ site_I <- data.frame()
 site_num_I <- data.frame()
 for (i in 1:length(unique(RCTM_year2$Site))){
   RCTM_year2_i <- RCTM_year2[which(RCTM_year2$site_num == i),]
-  if((dim(RCTM_year2_i)[1] > 2)&(sd(RCTM_year2_i$NEE_measured)> 0)){
+  if((dim(RCTM_year2_i)[1] >= 2)&(sd(RCTM_year2_i$NEE_measured)> 0)){
     r2 <- cor(RCTM_year2_i$NEE_measured, RCTM_year2_i$NEE)^2
     mbe <- mean(RCTM_year2_i$NEE_measured - RCTM_year2_i$NEE)
     RMSE <- sqrt(mean((RCTM_year2_i$NEE_measured - RCTM_year2_i$NEE)^2))
@@ -186,7 +186,7 @@ site_I <- data.frame()
 site_num_I <- data.frame()
 for (i in 1:length(unique(RCTM_year3$Site))){
   RCTM_year3_i <- RCTM_year3[which(RCTM_year3$site_num == i),]
-  if((dim(RCTM_year3_i)[1] > 2)&(sd(RCTM_year3_i$NEE_measured)> 0)){
+  if((dim(RCTM_year3_i)[1] >= 2)&(sd(RCTM_year3_i$NEE_measured)> 0)){
     r2 <- cor(RCTM_year3_i$NEE_measured, RCTM_year3_i$NEE)^2
     mbe <- mean(RCTM_year3_i$NEE_measured - RCTM_year3_i$NEE)
     RMSE <- sqrt(mean((RCTM_year3_i$NEE_measured - RCTM_year3_i$NEE)^2))
@@ -219,7 +219,7 @@ site_I <- data.frame()
 site_num_I <- data.frame()
 for (i in 1:length(unique(RCTM_year4$Site))){
   RCTM_year4_i <- RCTM_year4[which(RCTM_year4$site_num == i),]
-  if((dim(RCTM_year4_i)[1] > 2)&(sd(RCTM_year4_i$NEE_measured)> 0)){
+  if((dim(RCTM_year4_i)[1] >= 2)&(sd(RCTM_year4_i$NEE_measured)> 0)){
     r2 <- cor(RCTM_year4_i$NEE_measured, RCTM_year4_i$NEE)^2
     mbe <- mean(RCTM_year4_i$NEE_measured - RCTM_year4_i$NEE)
     RMSE <- sqrt(mean((RCTM_year4_i$NEE_measured - RCTM_year4_i$NEE)^2))
