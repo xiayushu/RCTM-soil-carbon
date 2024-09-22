@@ -206,7 +206,7 @@ flux_plot <- dygraph(data_flux_reorg, main = "Visualization for flux measures") 
   dySeries("GPP_PI_F_avg", label = "GPP") %>%
   dySeries("NEE_PI_F_avg", label = "NEE") %>%
   dySeries("RECO_PI_F_avg", label = "RECO") %>%
-  dyAxis("y", label = "µmol CO<sub>2</sub> m<sup>-2</sup> s<sup>-1</sup>", valueRange = c(-20, 30)) %>%
+  dyAxis("y", label = "Âµmol CO<sub>2</sub> m<sup>-2</sup> s<sup>-1</sup>", valueRange = c(-20, 30)) %>%
   dyRangeSelector() %>%
   dyLegend(width = 650) %>%
   dyOptions(colors = RColorBrewer::brewer.pal(3, "Set1"))
